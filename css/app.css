@@ -25,3 +25,67 @@ figcaption {
 	color: white;
 }
 
+/*Flexbox position */
+
+.wrap {
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	border: 3px solid gold;
+}
+
+.newSearch-wrap{
+	display: flex;
+}
+
+.newSearch-wrap > p {
+	flex:2;
+}
+
+.searchs-wrap {
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+}
+
+.searchs-wrap > * {
+	flex:1;
+}
+
+.searchs-wrap > figure {
+	display: flex;
+	margin: 1px;
+	border: 5px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	flex-direction: column;
+	flex:0;
+	min-width: 240px;
+}
+
+.searchs-wrap > figure > figcaption {
+	flex:2;
+}
+
+/*resposive media queries*/
+
+@media (min-width: 480px) { 
+	
+	.searchs-wrap {
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.searchs-wrap > * {
+		flex-direction: column;
+		flex:0;
+		min-width: 240px;
+	}
+
+}
